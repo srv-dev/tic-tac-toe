@@ -1,25 +1,16 @@
-
 $(document).ready(function() {
 
   let boardArray, turn, win, playerMarkers;
   const winningCombos = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6]
-  ];
+  [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6] ];
 
+  // Markers object to store players icons key-value pairs.
   const markers = {
     "X" : $('<span>').text('X').attr('class','options')[0].outerHTML ,
     "O" : $('<span>').text('O').attr('class','options')[0].outerHTML ,
     "icon1" : $('<img>').attr('src','icons/iron-man.ico').attr('class','icons')[0].outerHTML ,
     "icon2" : $('<img>').attr('src','icons/ww.ico').attr('class','icons')[0].outerHTML
   };
-
 
   // This function initializes and re-initializes global variables.
   const init = function() {
@@ -39,7 +30,7 @@ $(document).ready(function() {
     updatePlayerWins();
   };
 
-  // This function returns game's winner
+  // This function returns game's winner.
   const getWinner = function() {
 
     for(let i=0; i< winningCombos.length; i++){
@@ -48,20 +39,18 @@ $(document).ready(function() {
       const board0 = boardArray[combo[0]];
       const board1 = boardArray[combo[1]];
       const board2 = boardArray[combo[2]];
+
       if((board0 != '') && (board0 === board1) && (board1 === board2)) {
         return board0;
       }
     }
-
     if(!boardArray.includes(''))
       return 'D';
   };
 
-  const highlightWinGame = function(win) {
+  // This function stores and updates LocalStorage scoreboard for players.
+  const updateLocalStorage = function(win) {
 
-  };
-
-  const updateLocalStore = function(win) {
     if(win === "player1"){
       let p1WinCounter = localStorage.getItem('p1WinCounter');
       if(p1WinCounter === null) {
@@ -75,16 +64,15 @@ $(document).ready(function() {
       }
       localStorage.setItem('p2WinCounter', ++p2WinCounter);
     }
-
     localStorage.setItem('scoreBoard', $('#scoreBoard')[0].innerHTML);
   };
 
+  // This function updates Players win counters in LocalStorage.
   const updatePlayerWins = function() {
     let p1WinCounter = localStorage.getItem('p1WinCounter') || 0;
     let p2WinCounter = localStorage.getItem('p2WinCounter') || 0;
 
     $('#player1Wins').html(p1WinCounter);
-
     $('#player2Wins').html(p2WinCounter);
   };
 
@@ -92,7 +80,7 @@ $(document).ready(function() {
   const handleTurn = function(event) {
 
     let element = '';
-    // Disables board once game is over.
+    // Disables board selection when players are not selected or once game is over.
     if(win != null || playerMarkers['player1'] === null || playerMarkers['player2'] === null)
       return;
 
@@ -118,7 +106,7 @@ $(document).ready(function() {
       $('.message').html(`That's a Draw!!!`);
       $('.message').show();
     } else if (win != null) {
-      // highlightWinGame(win);
+
       $('.message').html(`Congratulations! ${win} wins the game!`);
       $('#won').append($('<div>').append(element));
       $('.message').show();
@@ -128,11 +116,12 @@ $(document).ready(function() {
       }else{
         $('#lost').append($('<div>').append(markers[playerMarkers["player1"]]));
       }
-      updateLocalStore(win);
+      updateLocalStorage(win);
       updatePlayerWins();
     }
   };
 
+  // This function is an event listener for icons or players selection.
   const iconSelectListener = function(event) {
 
     if(playerMarkers['player1'] === null) {
@@ -148,6 +137,7 @@ $(document).ready(function() {
 
   $('.players').on('click', iconSelectListener);
 
+  // Event listener for clicks on squares of game board.
   $('.square').on('click', handleTurn);
 
   $('#reset').on('click', function() {
