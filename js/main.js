@@ -35,6 +35,7 @@ $(document).ready(function() {
       $('#scoreBoard').html(retrieveScores);
     }
     $('.playersClass').hide();
+    $('.message').hide();
     updatePlayerWins();
   };
 
@@ -114,11 +115,13 @@ $(document).ready(function() {
     win = getWinner();
 
     if (win === 'D'){
-      $('h2').html(`That's a Draw!!!`);
+      $('.message').html(`That's a Draw!!!`);
+      $('.message').show();
     } else if (win != null) {
       // highlightWinGame(win);
-      $('h2').html(`${turn} wins the game!`);
+      $('.message').html(`Congratulations! ${turn} wins the game!`);
       $('#won').append($('<div>').append(element));
+      $('.message').show();
 
       if(win === "player1"){
         $('#lost').append($('<div>').append(markers[playerMarkers["player2"]]));
@@ -127,8 +130,6 @@ $(document).ready(function() {
       }
       updateLocalStore(win);
       updatePlayerWins();
-    } else {
-      $('h2').html(`${turn}'s turn!`);
     }
   };
 

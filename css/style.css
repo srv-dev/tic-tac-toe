@@ -146,3 +146,13 @@ h2 {
 #won div,#lost div {
   height: 36px;
 }
+.message {
+  position: absolute;
+  top : 40%;
+  left : 25%;
+  padding: 40px 20px;
+  background-color: rgb(255,240,40);
+  border-radius: 10px 0px ;
+  font-size: 35px;
+  font-family: 'Rye', cursive;
+}
