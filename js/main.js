@@ -15,7 +15,6 @@ $(document).ready(function() {
   // This function initializes and re-initializes global variables.
   const init = function() {
     boardArray = [ '', '', '', '', '', '', '', '', '' ];
-    turn = player1;
     win = null;
     playerMarkers = {
       "player1" : null ,
@@ -76,6 +75,15 @@ $(document).ready(function() {
     $('#player2Wins').html(p2WinCounter);
   };
 
+  const updatePlayerTurnDisplay = function() {
+    $('.playersClass').removeClass('currentTurnPlayer');
+    if(turn === "player1") {
+      $('#player2').addClass('currentTurnPlayer');
+    } else {
+      $('#player1').addClass('currentTurnPlayer');
+    }
+  };
+
   // This function handles players turns and declares winner.
   const handleTurn = function(event) {
 
@@ -119,6 +127,7 @@ $(document).ready(function() {
       updateLocalStorage(win);
       updatePlayerWins();
     }
+    updatePlayerTurnDisplay();
   };
 
   // This function is an event listener for icons or players selection.

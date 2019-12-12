@@ -128,10 +128,14 @@ h3 {
 .message {
   position: absolute;
   top : 10%;
-  left : 67%;
+  left : 65%;
   padding: 20px 10px;
   background-color: rgb(255,240,40);
   border-radius: 10px 0px ;
   font-size: 25px;
   font-family: 'Rye', cursive;
+}
+.currentTurnPlayer {
+  background-color: rgba(0,0,255,0.3);
+  border-radius: 4px;
 }
