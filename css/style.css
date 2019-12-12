@@ -5,7 +5,6 @@
 body {
   text-align: center;
   font-family: 'Great Vibes', cursive;
-  /* background-color: #00CCCC; */
   background-color: #4CDFD2;
 }
 h1 {
@@ -29,26 +28,18 @@ h3 {
 .options, .icons {
   cursor: pointer;
 }
-h2 {
-  /* margin: 0 auto; */
-  font-size: 30px;
-  margin: 10px;
-}
 .flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .flex-column {
-  /* height: 100%;
-  width: 100%; */
   flex-direction: column;
 }
 .flex-wrap {
   flex-wrap: wrap;
   height: 392px;
   width: 392px;
-  /* box-shadow: 2px 3px 5px 4px #555555; */
   box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.75);
   background: rgba(255,255,255,0.8);
 }
@@ -59,14 +50,9 @@ h2 {
   margin: 10px;
   box-shadow: inset 4px 4px 9px 0px rgba(0,0,0,0.75);
   background-color: #4CDFD2;
-  /* box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.75); */
-
-  /* box-shadow: 2px 3px 5px 4px #555555; */
 }
 .flex-wrap :hover {
-  /* background-color: #660044; */
-  background-color: rgb(230,0,230);
-
+  background-color: rgba(15,57,69,0.9);
 }
 .square .icons {
   display: block;
@@ -85,8 +71,6 @@ h2 {
   cursor: pointer;
 }
 .square .options  {
-  /* color: #FF42E6;  /* #AB274F */ */
-  /* font-size: 50px; */
   text-align: center;
   line-height: 100px;
 }
@@ -120,15 +104,11 @@ h2 {
   left: 16%;
 }
 #display {
-  /* border: 1px solid black; */
   position: absolute;
   top: 40%;
   left: 65%;
   min-width: 30%;
   min-height: 30%;
-  /* border-radius: 10px; */
-  /* box-shadow: 2px 3px 5px 4px #444444; */
-  /* overflow: auto; */
 }
 #scoreHead, #display {
   font-family: 'Rye',cursive;
@@ -148,11 +128,11 @@ h2 {
 }
 .message {
   position: absolute;
-  top : 40%;
-  left : 25%;
-  padding: 40px 20px;
+  top : 10%;
+  left : 67%;
+  padding: 20px 10px;
   background-color: rgb(255,240,40);
   border-radius: 10px 0px ;
-  font-size: 35px;
+  font-size: 25px;
   font-family: 'Rye', cursive;
 }

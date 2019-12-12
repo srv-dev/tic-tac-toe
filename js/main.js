@@ -119,7 +119,7 @@ $(document).ready(function() {
       $('.message').show();
     } else if (win != null) {
       // highlightWinGame(win);
-      $('.message').html(`Congratulations! ${turn} wins the game!`);
+      $('.message').html(`Congratulations! ${win} wins the game!`);
       $('#won').append($('<div>').append(element));
       $('.message').show();
 
