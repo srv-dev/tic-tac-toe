@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1> TIC . TAC . TOE   </h1>
+    <h3> Choose your icon </h3>
+    <span class="players options" id="X"> X </span> &emsp; <span class="players options" id="O"> O </span>
+    <img src="icons/iron-man.ico" alt="Iron Man" class="players icons" id="icon1"> &emsp;
+    <img src="icons/ww.ico" alt="ww" class="players icons" id="icon2" > <br><br>
+
+
+    <h2>&nbsp;</h2>
+    <br>
+    <div class="flex-container flex-column">
+      <div class="flex-container flex-wrap" id="board">
+        <div class="square" id="0"></div>
+        <div class="square" id="1"></div>
+        <div class="square" id="2"></div>
+        <div class="square" id="3"></div>
+        <div class="square" id="4"></div>
+        <div class="square" id="5"></div>
+        <div class="square" id="6"></div>
+        <div class="square" id="7"></div>
+        <div class="square" id="8"></div>
+      </div>
+      <br>
+      <button id="reset">RESET</button>
+    </div>
+    <h4 id="scoreHead"> SCOREBOARD </h4>
+    <div id="scoreBoard">
+      <div class="won-lost">WON</div><div class="won-lost">LOST</div>
+      <div id="won" class="won-lost"></div><div id="lost" class="won-lost"></div>
+    </div>
+    <div id="display">
+      <div id="playersDisplay">
+        <div class="playersClass" id="player1">Player 1  <div class="selected-icon" id="playerIcon1"></div> </div> <br>
+        <div class="playersClass" id="player2">Player 2  <div class="selected-icon" id="playerIcon2"></div> </div> <br>
+        <div class="wins"> Player1 wins :  <span class="wins-span" id="player1Wins"></span> </div> <br>
+        <div class="wins"> Player2 wins :  <span class="wins-span" id="player2Wins"></span> </div>
+
+      </div>
+
+    </div>
+
+    </div>
+    <script src="js/jquery.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>

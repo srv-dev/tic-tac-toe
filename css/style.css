@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Faster+One|Monoton|Rye&display=swap');
+
+body {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  /* background-color: #00CCCC; */
+  background-color: #4CDFD2;
+}
+h1 {
+  font-size: 50px;
+  font-family: 'Monoton', cursive;
+  margin: 0px ;
+}
+h3 {
+  font-size: 30px;
+  margin: 10px auto;
+}
+.options {
+  font-size: 60px;
+  color: maroon;
+  font-family: 'Helvetica';
+}
+.icons {
+  height: 60px;
+  width: 60px;
+}
+.options, .icons {
+  cursor: pointer;
+}
+h2 {
+  /* margin: 0 auto; */
+  font-size: 30px;
+  margin: 10px;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column {
+  /* height: 100%;
+  width: 100%; */
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+  height: 392px;
+  width: 392px;
+  /* box-shadow: 2px 3px 5px 4px #555555; */
+  box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.75);
+  background: rgba(255,255,255,0.8);
+}
+.square {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  box-shadow: inset 4px 4px 9px 0px rgba(0,0,0,0.75);
+  background-color: #4CDFD2;
+  /* box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.75); */
+
+  /* box-shadow: 2px 3px 5px 4px #555555; */
+}
+.flex-wrap :hover {
+  /* background-color: #660044; */
+  background-color: rgb(230,0,230);
+
+}
+.square .icons {
+  display: block;
+  margin: 25% auto;
+}
+#reset {
+  text-align: center;
+  font-size : 12px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 25px;
+  height: 50px;
+  width: 80px;
+  margin: 15px;
+  box-shadow: 2px 3px 5px 4px #444444;
+  cursor: pointer;
+}
+.square .options  {
+  /* color: #FF42E6;  /* #AB274F */ */
+  /* font-size: 50px; */
+  text-align: center;
+  line-height: 100px;
+}
+#scoreBoard {
+  border: 1px solid black;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  min-width: 20%;
+  min-height: 60%;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px 4px #444444;
+  overflow: auto;
+}
+.won-lost{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+  display: inline-block;
+  width: 50%;
+  padding-top : 15px;
+}
+
+#scoreBoard .players {
+  width: 35px;
+  height: auto;
+  font-size: 35px;
+}
+#scoreHead {
+  position: absolute;
+  top: 23%;
+  left: 16%;
+}
+#display {
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 40%;
+  left: 65%;
+  min-width: 30%;
+  min-height: 30%;
+  /* border-radius: 10px; */
+  /* box-shadow: 2px 3px 5px 4px #444444; */
+  /* overflow: auto; */
+}
+#scoreHead, #display {
+  font-family: 'Rye',cursive;
+}
+.won-lost .icons  {
+  width: 30px;
+  height: auto;
+}
+.won-lost .options {
+  font-size: 25px;
+}
+.wins {
+  font-size: 25px;
+}
+#won div,#lost div {
+  height: 36px;
+}
